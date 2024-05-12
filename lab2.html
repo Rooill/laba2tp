@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <link href="lab2.css" rel="stylesheet">
+    <link href="str.png" rel="icon">
+    <meta charset="utf-8" />
+    <title>
+        Star Craft
+    </title>
+</head>
+
+<script defer src="index.js"></script>
+
+<body style="background-image: url('fon.jpg');">
+
+    <div class="content">
+
+        <div class="resources">
+            Crystals: <i id="gem"></i> <br />
+            Workers: <i id="worker"></i> <br />
+            Warriors: <i id="warrior"></i>
+        </div>
+        <div class="status">
+            Game ID: <i id="gameID"></i> <br />
+            Status: <i id="status"></i> <br />
+            Move: <i id="move"></i>
+        </div>
+        <img class="fon_box_image" src="per.jpg">
+
+        <div class="form">
+            <label>Total price: <i id="total-price"></i></label>
+            <br />
+            <label>Buy workers (cost: 5 gems)</label>
+            <input min="0" id="input-worker" type="number" placeholder="Buying a Worker" onchange="update()" onkeypress="return false"/>
+            <br />
+            <br />
+            <label>Buy warriors (cost: 10 gems)</label>
+            <input min="0" id="input-warrior" type="number" placeholder="Buying a Warrior" onchange="update()" onkeypress="return false"/>
+            
+            <input id="attack-button" type="submit" value="Attack the enemy" onclick="buttonHandler('attack-button')"/>
+            <input id="end-button" type="submit" value="Complete the move" onclick="buttonHandler('end-button')" />
+            <input id="new-button" type="submit" value="Start new game" onclick="buttonHandler('new-button')"/>
+        </div>
+
+    </div>
+</body>
+
+</html>
